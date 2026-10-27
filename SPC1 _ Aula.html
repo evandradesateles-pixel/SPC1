@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPC1 | Aula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0C0B;--bg2:#171513;--ink:#E9DFCB;--mute:#A39A88;--gold:#CBA865;--line:#2E2A24;--bege:#E6DAC4;--dark:#0D0C0B;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,sans-serif}
+.w{max-width:780px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.12;margin:0;color:var(--gold)}
+h1{font-size:clamp(36px,7vw,58px);letter-spacing:-.02em}
+h2{font-size:clamp(28px,5vw,38px);margin-bottom:16px}
+p{margin:0 0 16px}
+.mute{color:var(--mute)}
+section{padding:68px 0;border-top:1px solid var(--line)}
+header{padding:64px 0 44px}
+.btn{display:inline-block;background:var(--gold);color:var(--dark);font:600 17px "DM Sans",sans-serif;padding:16px 30px;border:0;border-radius:6px;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--dark);border:1px solid var(--dark)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.frame{aspect-ratio:16/9;background:var(--bg2);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mute);padding:20px}
+.frame iframe{width:100%;height:100%;border:0}
+.prazo{display:inline-block;border-left:2px solid var(--gold);padding-left:14px;margin:22px 0 0;color:var(--mute);font-size:16px}
+.bege{background:var(--bege);color:var(--dark);border:0}
+.bege h2{color:var(--dark)}
+.bege .mute{color:#5A5244}
+.dia{display:grid;grid-template-columns:96px 1fr;gap:18px;padding:18px 0;border-top:1px solid #1A1713}
+.dia b{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:20px}
+.dia span{display:block}
+.dia .o{font-size:15px;color:#5A5244}
+@media(max-width:520px){.dia{grid-template-columns:1fr;gap:2px}}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.oferta{display:grid;gap:34px}
+.itens{list-style:none;padding:0;margin:0}
+.itens li{padding:14px 0;border-bottom:1px solid var(--line)}
+.itens b{color:var(--gold);font-weight:500}
+.price{font-family:Fraunces,Georgia,serif;font-size:60px;line-height:1;color:var(--gold)}
+.old{text-decoration:line-through;color:var(--mute);font-size:20px}
+.fq{border-top:1px solid var(--line);padding:20px 0}
+.fq h3{font-size:20px;color:var(--ink);font-weight:600;margin-bottom:6px}
+.fq p{margin:0;color:var(--mute)}
+footer{padding:40px 0;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+.msg{font-size:15px;color:var(--mute);min-height:22px;margin-top:12px}
+.bege .msg{color:#5A5244}
+</style>
+</head>
+<body>
+
+<header><div class="w">
+<h1>A aula está no ar.</h1>
+<p class="mute" style="font-size:20px;margin-top:20px;max-width:32em">Assista com caneta na mão. Ao longo dela você escreve a sua oferta e monta o seu caderno.</p>
+</div></header>
+
+<div class="w">
+<div class="frame" id="video">O vídeo do replay aparece aqui.</div>
+<p id="alt" class="mute" style="font-size:15px;margin-top:12px;display:none">Não carregou? <a id="altl" href="#" target="_blank" rel="noopener" style="color:var(--gold)">Abra o vídeo em outra aba.</a></p>
+<div class="prazo" id="prazo"></div>
+</div>
+
+<section class="bege" style="margin-top:68px"><div class="w">
+<h2>Sua semana de conteúdo.</h2>
+<p class="mute">Uma peça por dia, cada uma com um único objetivo. Troque os exemplos pelo seu assunto e mantenha a ordem.</p>
+<div id="semana"></div>
+<div class="acts">
+<button class="btn ghost" id="bx" type="button">Baixar o modelo</button>
+</div>
+<div class="msg" id="msg" role="status"></div>
+</div></section>
+
+<section><div class="w oferta">
+<div>
+<h2>A aula termina aqui. O CDV é o que vem depois.</h2>
+<p class="mute">O SPC1 é uma aula gratuita e está completa. O CDV é outro produto: o treinamento com acompanhamento, para você executar com alguém ao seu lado.</p>
+</div>
+<ul class="itens">
+<li><b>Treinamento completo.</b> Os três pilares em aulas curtas, cada uma com uma tarefa prática. Acesso por 1 ano.</li>
+<li><b>Suporte direto comigo.</b> Em horário comercial, de segunda a sexta, por 1 ano.</li>
+<li><b>Consultoria aos sábados.</b> Encontros para destravar o seu caso, por 1 ano.</li>
+<li><b>Mentoria de 3 meses.</b> A partir de janeiro, sem custo à parte.</li>
+</ul>
+<div>
+<span class="old">De R$ 500</span>
+<div class="price">R$ 217</div>
+<p class="mute" style="margin-top:12px">Parcelável no cartão. Condição de lançamento para as primeiras 25 vagas.</p>
+<div class="acts"><a class="btn" id="eu" href="#" target="_blank" rel="noopener">Quero entrar no CDV</a></div>
+<p class="mute" style="font-size:15px;margin-top:16px">Você fala direto comigo no WhatsApp e eu confirmo a sua vaga.</p>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Dúvidas comuns.</h2>
+<div class="fq"><h3>Não tenho muitos seguidores.</h3><p>Esta aula foi feita a partir de um perfil de 5 mil pessoas. O que importa é saber para quem falar e o que dizer.</p></div>
+<div class="fq"><h3>Não sei o que ensinar ou vender.</h3><p>O pilar Lugar existe para isso. Você parte do que já sabe e chega a uma frase que diz a quem você ajuda.</p></div>
+<div class="fq"><h3>Não tenho tempo.</h3><p>A rotina é de uma peça por dia. Se você tem 30 minutos, consegue.</p></div>
+<div class="fq"><h3>E se não for para mim?</h3><p>Fale comigo antes de decidir. Eu respondo no WhatsApp e digo com honestidade se faz sentido no seu momento.</p></div>
+</div></section>
+
+<section><div class="w">
+<h2>Imagine a próxima segunda-feira.</h2>
+<p style="font-size:20px">Você abre o seu perfil e ele diz, em uma frase, quem você ajuda. A semana de conteúdo está pronta, a lista de pessoas está na sua mão e, quando aparece a primeira dúvida, tem alguém para responder em horário comercial, de segunda a sexta.</p>
+<p class="mute">No sábado, uma consultoria para o seu caso. Em janeiro, três meses de mentoria, sem custo à parte. Um ano inteiro com acompanhamento, no lugar de um ano tentando sozinho.</p>
+<p>O SPC1 te mostrou o caminho. O CDV é caminhar por ele com alguém ao lado, até o primeiro cliente e depois dele.</p>
+<div class="acts"><a class="btn" id="eu2" href="#" target="_blank" rel="noopener">Quero entrar no CDV por R$ 217</a></div>
+</div></section>
+
+<footer><div class="w">SPC1 · Seu Primeiro Cliente em 1 Semana. Os resultados dependem da aplicação do que é ensinado e variam de pessoa para pessoa.</div></footer>
+
+<script>
+// ===== EDITE AQUI =====
+var CFG={
+  whatsLink:"https://wa.me/message/IFPPFH45R5MMP1",   // WhatsApp com DDI+DDD, só números
+  liberar:"2026-10-30T20:00:00-03:00",video:"",                // link do replay (YouTube ou Vimeo). Vazio = mostra o espaço reservado
+  prazo:"A condição especial fica aberta por tempo limitado, a partir da liberação da aula.",
+  checkout:""              // link de pagamento, se tiver. Vazio = abre o WhatsApp
+};
+// ======================
+var $=function(i){return document.getElementById(i)};
+var SEM=[
+["Segunda","Story de dor","Mostre o problema do seu cliente com uma pergunta que ele já fez a si mesmo. Feche com uma caixinha de perguntas."],
+["Terça","Story de ensino","Ensine uma coisa pequena e útil em 3 stories. Termine pedindo que respondam com uma palavra."],
+["Quarta","Story de prova","Um print, um depoimento ou um antes e depois. Conte o que mudou, sem exagero."],
+["Quinta","Post de autoridade","Um post que explica o seu jeito de resolver o problema. A última linha convida para o direct."],
+["Sexta","Story de bastidor","Mostre como você trabalha. A confiança nasce de ver o processo."],
+["Sábado","Story de convite","Diga em uma frase o que você oferece e a quem. Abra o direct para quem quiser saber mais."],
+["Domingo","Direct e revisão","Responda toda mensagem da semana. Anote as perguntas que mais apareceram: elas viram o conteúdo da próxima."]
+];
+$("semana").innerHTML=SEM.map(function(d){return '<div class="dia"><b>'+d[0]+'</b><div><span><b style="font-size:17px;font-family:inherit">'+d[1]+'</b></span><span class="o">'+d[2]+'</span></div></div>'}).join("");
+$("prazo").textContent=CFG.prazo;
+var wa=CFG.whatsLink;
+$("eu").href=CFG.checkout||wa;$("eu2").href=CFG.checkout||wa;
+(function(){
+  var u=CFG.video.trim();if(!u)return;if(Date.now()<new Date(CFG.liberar)){$("video").textContent="A aula será liberada nesta página na sexta-feira, às 20h.";return}
+  var src="",m;
+  if(m=u.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/))src="https://www.youtube.com/embed/"+m[1]+"?rel=0";
+  else if(m=u.match(/vimeo\.com\/(\d+)/))src="https://player.vimeo.com/video/"+m[1];
+  if(src){$("video").innerHTML='<iframe src="'+src+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Replay da aula SPC1"></iframe>'}
+  $("altl").href=u;$("alt").style.display="block";
+})();
+$("bx").addEventListener("click",async function(){
+  var t="SPC1 | MODELO DE SEMANA DE CONTEUDO\n\n"+SEM.map(function(d){return d[0]+" - "+d[1]+"\n"+d[2]}).join("\n\n")+"\n";
+  try{
+    var dl=await claude.use("downloads");
+    if(!dl){$("msg").textContent="Para guardar, tire um print desta tela.";return}
+    await dl.save({filename:"spc1-semana-de-conteudo.txt",data:t});
+    $("msg").textContent="Modelo salvo.";
+  }catch(e){$("msg").textContent=(e&&e.code==="declined")?"":"Não foi possível baixar. Tire um print desta tela."}
+});
+</script>
+</body>
+</html>
