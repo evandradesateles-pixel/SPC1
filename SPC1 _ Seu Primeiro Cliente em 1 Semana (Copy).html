@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPC1 | Seu Primeiro Cliente em 1 Semana (Copy)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0D0C0B;--bg2:#171513;--ink:#E9DFCB;--mute:#A39A88;--gold:#CBA865;--line:#2E2A24;--on-gold:#0D0C0B;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,sans-serif}
+.w{max-width:760px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.12;margin:0;color:var(--gold)}
+h1{font-size:clamp(40px,8vw,68px);letter-spacing:-.02em}
+h2{font-size:clamp(28px,5vw,40px);margin-bottom:18px}
+h3{font-size:22px;font-weight:600}
+p{margin:0 0 16px}
+.mute{color:var(--mute)}
+section{padding:72px 0;border-top:1px solid var(--line)}
+.hero{padding:84px 0 72px;border:0}
+.tag{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:6px 14px;border-radius:99px;font-size:14px;margin-bottom:28px}
+.btn{display:inline-block;background:var(--gold);color:var(--on-gold);font:600 17px "DM Sans",sans-serif;padding:16px 30px;border:0;border-radius:6px;cursor:pointer;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.pillars{display:grid;gap:0;margin-top:28px}
+.pil{padding:26px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:140px 1fr;gap:20px}
+.pil h3{color:var(--gold)}
+.pil p{margin:0}
+@media(max-width:560px){.pil{grid-template-columns:1fr;gap:6px}}
+ul.chk{list-style:none;padding:0;margin:0}
+ul.chk li{padding:12px 0 12px 30px;border-bottom:1px solid var(--line);position:relative}
+ul.chk li::before{content:"";position:absolute;left:4px;top:21px;width:12px;height:6px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:30px 26px}
+label.f{display:block;font-weight:500;margin:0 0 6px}
+input[type=text],input[type=tel],input[type=email]{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:14px;font:inherit;margin-bottom:18px}
+input::placeholder{color:#6F675A}
+fieldset{border:0;padding:0;margin:30px 0 0}
+legend{font-family:Fraunces,Georgia,serif;font-size:20px;padding:0;margin-bottom:12px;line-height:1.3}
+.opt{display:block;position:relative;margin-bottom:8px}
+.opt input{position:absolute;opacity:0}
+.opt span{display:block;padding:13px 16px;border:1px solid var(--line);border-radius:6px;cursor:pointer;background:var(--bg);font-size:16px;line-height:1.4}
+.opt input:checked+span{border-color:var(--gold);background:#241F19;box-shadow:inset 3px 0 0 var(--gold)}
+.opt input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+.err{color:#E8A08A;font-size:15px;margin-top:14px;min-height:22px}
+.stack{width:100%;border-collapse:collapse;margin:22px 0}
+.stack td{padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.stack td:last-child{text-align:right;white-space:nowrap;color:var(--mute);padding-left:14px}
+.price{font-family:Fraunces,Georgia,serif;font-size:56px;line-height:1;color:var(--gold)}
+.old{text-decoration:line-through;color:var(--mute);font-size:20px;margin-right:10px}
+.done{display:none}
+footer{padding:40px 0;border-top:1px solid var(--line);font-size:14px;color:var(--mute)}
+@media(prefers-reduced-motion:no-preference){.hero .w{animation:in .9s ease both}@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="w">
+<span class="tag">Aula gratuita · liberada na sexta, às 20h · vagas limitadas</span>
+<h1>Seu primeiro cliente em 1 semana.</h1>
+<p style="font-size:21px;margin:26px 0 34px;max-width:34em" class="mute">Em 1h30 você escreve a sua oferta e descobre quem é a pessoa que vai comprar de você primeiro. Com o que você já sabe, sem precisar de milhares de seguidores.</p>
+<a class="btn" href="#inscricao">Garantir minha vaga</a>
+<p class="mute" style="margin-top:22px;font-size:15px"><span id="quando"></span></p>
+</div></header>
+
+<section><div class="w">
+<h2>O digital funciona em três peças.</h2>
+<p class="mute">Quem tem conhecimento e não aparece perde para quem aparece e sabe menos. A aula mostra como inverter isso, e cada peça vira um exercício feito ao vivo.</p>
+<div class="pillars">
+<div class="pil"><h3>Lugar</h3><p>Posicionamento. Quem você ajuda, com o quê, e por que deve ser você. Uma frase que faz a pessoa certa pensar “é pra mim”.</p></div>
+<div class="pil"><h3>Voz</h3><p>Comunicação. Como transformar o que você sabe numa mensagem que o cliente entende e deseja, sem jargão e sem parecer que está vendendo.</p></div>
+<div class="pil"><h3>Vitrine</h3><p>Conteúdo. Um sistema simples de stories e posts que coloca a sua mensagem na frente de quem compra, e leva a conversa para o direct.</p></div>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>O que você leva da aula.</h2>
+<ul class="chk">
+<li>Sua frase de posicionamento escrita e comentada ao vivo</li>
+<li>Uma oferta clara, com o problema que ela resolve e para quem</li>
+<li>O modelo de semana de conteúdo, pronto para copiar</li>
+<li>Os três próximos passos até o seu primeiro cliente</li>
+</ul>
+<p class="mute" style="margin-top:26px">Tenha caneta e papel por perto. Quem escreve junto, sai com a oferta pronta.</p>
+</div></section>
+
+<section id="inscricao"><div class="w">
+<h2>Garanta sua vaga.</h2>
+<p class="mute">Leva 2 minutos. As respostas me ajudam a montar a aula para o seu momento. As vagas são liberadas por ordem de inscrição completa.</p>
+<form class="card" id="frm" novalidate>
+<div id="fields">
+<label class="f" for="nome">Nome completo</label><input id="nome" type="text" autocomplete="name">
+<label class="f" for="zap">WhatsApp com DDD</label><input id="zap" type="tel" autocomplete="tel" placeholder="(11) 90000-0000">
+<label class="f" for="mail">E-mail</label><input id="mail" type="email" autocomplete="email">
+<label class="f" for="ig">Seu @ do Instagram</label><input id="ig" type="text" placeholder="@seuperfil">
+<div id="qs"></div>
+</div>
+<div class="err" id="err" role="alert"></div>
+<button class="btn" type="submit" style="margin-top:12px;width:100%">Confirmar minha inscrição</button>
+</form>
+<div class="card done" id="ok">
+<h2 style="margin-bottom:12px">Falta um passo.</h2>
+<p>Copie a sua ficha abaixo, abra o WhatsApp e cole a mensagem na conversa. A inscrição só fica confirmada depois do envio.</p><textarea id="ficha" readonly rows="9" style="width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:12px;font-size:15px;font-family:inherit;margin-bottom:14px"></textarea><button class="btn" id="cp" type="button" style="margin:0 12px 12px 0">Copiar ficha</button>
+<a class="btn" id="wa" href="#" target="_blank" rel="noopener">Abrir meu WhatsApp</a>
+<p class="mute" style="margin-top:22px;font-size:15px">Depois, entre no grupo para receber o link da aula e o material: <a id="grp" href="#" style="color:var(--gold)">entrar no grupo</a>.</p>
+</div>
+</div></section>
+
+<section><div class="w">
+<h2>Depois da aula, uma condição especial para o CDV.</h2>
+<p class="mute">A aula SPC1 é gratuita e está completa por si só. A condição abaixo é de outro produto, o CDV, o treinamento com acompanhamento para quem quer ir além. Ela fica aberta por tempo limitado, só para quem assistir à aula.</p>
+<table class="stack">
+<tr><td>Treinamento completo, com 1 ano de acesso</td><td>R$ 500</td></tr>
+<tr><td>Suporte direto comigo em horário comercial, por 1 ano</td><td>incluso</td></tr>
+<tr><td>Consultoria aos sábados, por 1 ano</td><td>incluso</td></tr>
+<tr><td>Mentoria de 3 meses a partir de janeiro</td><td>incluso</td></tr>
+</table>
+<p><span class="old">R$ 500</span></p>
+<div class="price">R$ 217</div>
+<p class="mute" style="margin-top:10px">Parcelável no cartão. Preço de lançamento, válido para as primeiras 25 vagas.</p>
+</div></section>
+
+<footer><div class="w">SPC1 · Seu Primeiro Cliente em 1 Semana. Os resultados dependem da aplicação do que é ensinado e variam de pessoa para pessoa.</div></footer>
+
+<script>
+// ===== EDITE AQUI =====
+var CFG={
+  whatsLink:"https://wa.me/message/IFPPFH45R5MMP1",            // seu WhatsApp com DDI+DDD, só números
+  grupo:"https://chat.whatsapp.com/LS9uIur5Bf4GIMZtYsPuI1?s=cl&p=i&mlu=0",
+  quando:"A aula é liberada na sexta-feira, às 20h (horário de Brasília)."   // dia e hora da aula
+};
+// ======================
+var Q=[
+["Em que momento você está hoje?",[["Ainda não sei o que posso vender",1],["Sei o que vender, mas ainda não tenho clientes",3],["Tenho clientes, mas de forma inconstante",3],["Tenho clientes e quero escalar",2]]],
+["Você já vendeu algo pela internet?",[["Nunca",1],["Poucas vezes",2],["Vendo com frequência",3]]],
+["O que mais trava seus resultados hoje?",[["Não sei o que postar",2],["Posto, mas não vira venda",3],["Não sei me posicionar",3],["Falta de tempo",1],["Não acredito que funcione para mim",0]]],
+["Quantas horas por semana você consegue dedicar ao seu negócio digital?",[["Menos de 2h",0],["De 2h a 5h",2],["De 5h a 10h",3],["Mais de 10h",3]]],
+["Para quando você quer o seu primeiro cliente?",[["Nos próximos 7 dias",3],["Nos próximos 30 dias",3],["Em até 3 meses",1],["Só estou curioso(a)",0]]],
+["Você já investiu em curso, mentoria ou consultoria?",[["Nunca",0],["Sim, até R$ 300",1],["Sim, entre R$ 300 e R$ 1.000",3],["Sim, mais de R$ 1.000",3]]],
+["Se a aula mostrar o caminho e existir uma condição especial para quem quiser acompanhamento, qual a chance de você entrar?",[["Quero garantir minha vaga já",4],["Provavelmente, preciso ver os detalhes",2],["Talvez",1],["Só quero assistir à aula",0]]],
+["Se decidir entrar, como prefere pagar?",[["À vista no Pix",3],["Parcelado no cartão",3],["Não tenho condição de investir agora",0]]],
+["Quando você vai assistir à aula?",[["Na sexta, assim que for liberada",3],["Durante o fim de semana",2]]]
+];
+var $=function(i){return document.getElementById(i)};
+$("quando").textContent=CFG.quando;
+$("grp").href=CFG.grupo;
+$("qs").innerHTML=Q.map(function(q,i){
+  return '<fieldset><legend>'+q[0]+'</legend>'+q[1].map(function(o,j){
+    return '<label class="opt"><input type="radio" name="q'+i+'" value="'+j+'"><span>'+o[0]+'</span></label>';
+  }).join("")+'</fieldset>';
+}).join("");
+$("frm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var nome=$("nome").value.trim(),zap=$("zap").value.replace(/\D/g,""),mail=$("mail").value.trim(),ig=$("ig").value.trim();
+  if(!nome||zap.length<10||!/\S+@\S+\.\S+/.test(mail)||!ig){$("err").textContent="Preencha nome, WhatsApp com DDD, e-mail e Instagram.";return}
+  var pts=0,ans=[],pick=[];
+  for(var i=0;i<Q.length;i++){
+    var r=document.querySelector('input[name="q'+i+'"]:checked');
+    if(!r){$("err").textContent="Responda a pergunta "+(i+1)+" para continuar.";document.querySelector('input[name="q'+i+'"]').closest("fieldset").scrollIntoView({block:"center"});return}
+    var o=Q[i][1][+r.value];pts+=o[1];pick.push(o);ans.push((i+1)+") "+o[0]);
+  }
+  var tag=pts>=20?"QUENTE":pts>=12?"MORNA":"FRIA";
+  if(pick[6][1]===0||pick[7][1]===0)tag="FRIA";
+  else if(pick[6][1]===4&&pick[4][1]===3&&Q[4][1][+document.querySelector('input[name="q4"]:checked').value][0].indexOf("Nos próximos")===0)tag="QUENTE";
+  var msg="Inscrição SPC1\nNome: "+nome+"\nWhatsApp: "+zap+"\nE-mail: "+mail+"\nInstagram: "+ig+"\n\n"+ans.join("\n")+"\n\n[Pontos: "+pts+" | "+tag+"]";
+  $("wa").href=CFG.whatsLink;$("ficha").value=msg;try{navigator.clipboard.writeText(msg)}catch(x){}$("cp").onclick=function(){var t=$("ficha");t.select();try{navigator.clipboard.writeText(t.value)}catch(x){}try{document.execCommand("copy")}catch(x){}this.textContent="Copiada"};
+  $("frm").style.display="none";$("ok").style.display="block";$("ok").scrollIntoView({block:"center"});
+});
+</script>
+</body>
+</html>
